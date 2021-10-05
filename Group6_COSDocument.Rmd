@@ -21,7 +21,6 @@ output: prereg::cos_prereg
 # Study Information
 
 ## Title
-adfhjdakfd
 <!-- Provide the working title of your study. It may be the same title that you submit for publication of your final manuscript, but it is not a requirement. The title should be a specific and informative description of a project. Vague titles such as 'Fruit fly preregistration plan' are not appropriate.
 
 Example: Effect of sugar on brownie tastiness. -->
