@@ -20,10 +20,8 @@ output: prereg::cos_prereg
 
 # Study Information
 
-## Title
-<!-- Provide the working title of your study. It may be the same title that you submit for publication of your final manuscript, but it is not a requirement. The title should be a specific and informative description of a project. Vague titles such as 'Fruit fly preregistration plan' are not appropriate.
+## What are the important factors for survival aboard the titanic? 
 
-Example: Effect of sugar on brownie tastiness. -->
 
 `r rmarkdown::metadata$title`
 
@@ -48,15 +46,10 @@ Enter your response here.
 <!-- In this section, you will be asked to describe the overall design of your study. Remember that this research plan is designed to register a single study, so if you have multiple experimental designs, please complete a separate preregistration. -->
 
 
+
 ## Study type
 
-**Experiment**. A researcher randomly assigns treatments to study subjects, this includes field or lab experiments. This is also known as an intervention experiment and includes randomized controlled trials.
-
 **Observational Study**. Data is collected from study subjects that are not randomly assigned to a treatment. This includes surveys, natural experiments, and regression discontinuity designs.
-
-**Meta-Analysis**. A systematic review of published studies.
-
-**Other**. Please explain.
 
 
 ## Blinding
@@ -78,7 +71,7 @@ This question has a variety of possible answers. The key is for a researcher to 
 
 Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels. -->
 
-Enter your response here.
+To understand the driving factors of survival aboard the titanic, we will use a mixed effect model approach. ...
 
 
 ## Randomization
@@ -193,6 +186,18 @@ Enter your response here.
 A confirmatory analysis plan must state up front which variables are predictors (independent) and which are the outcomes (dependent), otherwise it is an exploratory analysis. You are allowed to describe any exploratory work here, but a clear confirmatory analysis is required. -->
 
 
+We will be using the predictor variables age, class, fare, gender, and boat ID to understand drivers of survival aboard the titanic. 
+
+```{r message=FALSE, warning=FALSE}
+library(knitr)
+library(readr)
+library(magrittr)
+library(dplyr)
+library(titanic)
+knitr::kable(head(titanic))
+titanic<- read_csv(file="titanic.csv")
+```
+
 ## Statistical models
 <!-- What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, multiple regression, SEM, etc) and the specification of the model (this includes each variable that will be included as predictors, outcomes, or covariates). Please specify any interactions, subgroup analyses, pairwise or complex contrasts, or follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Remember that any test not included here must be noted as an exploratory test in your final article.
 
@@ -203,7 +208,8 @@ This is perhaps the most important and most complicated question within the prer
 
 Example:  We will use a one-way between subjects ANOVA to analyze our results. The manipulated, categorical independent variable is 'sugar' whereas the dependent variable is our taste index. -->
 
-Enter your response here.
+
+To assess the drivers of survivability aboard the titanic, mixed effect models will be run with X fixed effects and Y random effects. 
 
 
 ## Transformations
