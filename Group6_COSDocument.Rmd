@@ -32,7 +32,7 @@ output: prereg::cos_prereg
 
 # Study Information
 
-## What are the important factors for survival aboard the titanic? 
+Where sex and class determinant for survival aboard the titanic? 
 
 
 `r rmarkdown::metadata$title`
@@ -45,16 +45,11 @@ Enter your response here.
 
 
 ## Hypotheses
-<!-- List specific, concise, and testable hypotheses. Please state if the hypotheses are directional or non-directional. If directional, state the direction. A predicted effect is also appropriate here. If a specific interaction or moderation is important to your research, you can list that as a separate hypothesis.
 
-Example: If taste affects preference, then mean preference indices will be higher with higher concentrations of sugar. -->
-
-Enter your response here.
+If both sex and class affected the survival aboard the Titanic, first-class passengers and women had a higher survival rate. 
 
 
 # Design Plan
-<!-- In this section, you will be asked to describe the overall design of your study. Remember that this research plan is designed to register a single study, so if you have multiple experimental designs, please complete a separate preregistration. -->
-
 
 
 ## Study type
@@ -62,7 +57,6 @@ Enter your response here.
 This is a retrospective observation study based on data obtained from the historical event of the sinking of the Titanic. 
 
 ## Blinding
-
 
 Not applicable
 
@@ -78,8 +72,6 @@ To understand the driving factors of survival aboard the titanic, we will use a 
 Not applicable.
 
 # Sampling Plan
-<!-- In this section we’ll ask you to describe how you plan to collect samples, as well as the number of samples you plan to collect and your rationale for this decision. Please keep in mind that the data described in this section should be the actual data used for analysis, so if you are using a subset of a larger dataset, please describe the subset that will actually be used in your study. -->
-
 
 ## Existing data
 <!-- Preregistration is designed to make clear the distinction between confirmatory tests, specified prior to seeing the data, and exploratory analyses conducted after observing the data. Therefore, creating a research plan in which existing data will be used presents unique challenges. Please select the description that best describes your situation. Please do not hesitate to contact us if you have questions about how to answer this question (prereg@cos.io). -->
