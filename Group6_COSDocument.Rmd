@@ -4,16 +4,28 @@ shorttitle      : "My preregistration"
 date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\. %B %Y')`"
 
 author: 
-  - name        : First Author
+  - name        : Lina Aragón-Baquero
     affiliation : 1
-  - name        : Ernst-August Doelle
-    affiliation : "1,2"
+  - name        : Kristen Bill
+    affiliation : 2
+  - name        : Leah D'Aloisio
+    affiliation : 3  
+  - name        : Jack Goldman
+    affiliation : 4  
+  - name        : Briar Hunter
+    affiliation : 5  
 
 affiliation:
   - id          : 1
-    institution : Wilhelm-Wundt-University
+    institution : University of Waterloo
   - id          : 2
-    institution : Konstanz Business School
+    institution : Wilfrid Laurier University 
+  - id          : 3
+    institution :   
+  - id          : 4
+    institution :  
+  - id          : 5
+    institution : Laurentian University 
 
 output: prereg::cos_prereg
 ---
@@ -27,10 +39,8 @@ output: prereg::cos_prereg
 
 
 ## Description
-<!-- Please give a brief description of your study, including some background, the purpose of the of the study, or broad research questions. The description should be no longer than the length of an abstract. It can give some context for the proposed study, but great detail is not needed here for your preregistration.
 
-Example: Though there is strong evidence to suggest that sugar affects taste preferences, the effect has never been demonstrated in brownies. Therefore, we will measure taste preference for four different levels of sugar concentration in a standard brownie recipe to determine if the effect exists in this pastry. -->
-
+It is well known that the survivorship upon the sinking of the Titanic was heavily influenced by sex and class of the individual. Studies reveal the role of sex and class was such a strong predictor of survival due to policies and social/physical barriers put in place that prioritzied first class and women/children. However, to our knowledge, no studies have investigated the impact of other variables on survival. Therefore, using a multivariate model we will test not only for sex and class, but also effects of age, family members, ticket fare, home destination and boat number.
 Enter your response here.
 
 
@@ -49,20 +59,12 @@ Enter your response here.
 
 ## Study type
 
-**Observational Study**. Data is collected from study subjects that are not randomly assigned to a treatment. This includes surveys, natural experiments, and regression discontinuity designs.
-
+This is a retrospective observation study based on data obtained from the historical event of the sinking of the Titanic. 
 
 ## Blinding
-<!-- Blinding describes who is aware of the experimental manipulations within a study. Select all that apply. Is there any additional blinding in this study? -->
 
-No blinding is involved in this study.
 
-For studies that involve human subjects, they will not know the treatment group to which they have been assigned.
-
-Personnel who interact directly with the study subjects (either human or non-human subjects) will not be aware of the assigned treatments.
-
-Personnel who analyze the data collected from the study are not aware of the treatment applied to any given group.
-
+Not applicable
 
 ## Study design
 <!-- Describe your study design. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required. Typical study designs for observation studies include cohort, cross sectional, and case-control studies.
