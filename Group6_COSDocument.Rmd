@@ -34,7 +34,7 @@ output: prereg::cos_prereg
 
 # Study Information
 
-Where sex and class determinant for survival aboard the titanic? 
+Where sex and class determinant for survival aboard the Titanic? 
 
 
 `r rmarkdown::metadata$title`
@@ -91,13 +91,8 @@ Not applicable.
 
 
 ## Explanation of existing data
-<!-- If you indicate that you will be using some data that already exist in this study, please describe the steps you have taken to assure that you are unaware of any patterns or summary statistics in the data. This may include an explanation of how access to the data has been limited, who has observed the data, or how you have avoided observing any analysis of the specific data you will use in your study.
 
-An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the dataset that had not been investigated by the researcher up to that point.
-
-Example: An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the dataset that had not been investigated by the researcher up to that point. -->
-
-Enter your response here.
+Since this is a replication study, we have read prior papers analyzing the predictors of survival on the Titanic. The conclusions from these papers were that sex and class were the main influence on survival. However, no statistical tests were used to conclude these effects, rather they compared a table of those who survived and died. To determine the effect of class and sex, the authors also used information provided by survivors who described their experiences. We have not read any studies that statistically analyzed all determinants of survival, therefore we are unaware of any summary statistics.
 
 
 ## Data collection procedures
@@ -107,7 +102,7 @@ The answer to this question requires a specific set of instructions so that anot
 
 Example: Participants will be recruited through advertisements at local pastry shops. Participants will be paid $10 for agreeing to participate (raised to $30 if our sample size is not reached within 15 days of beginning recruitment). Participants must be at least 18 years old and be able to eat the ingredients of the pastries. -->
 
-Enter your response here.
+This study utilized the publicly available titanic dataset found in R. The principal source for the data in this package is the Encyclopedia Titanica but a variety of researchers contributed to the datasets, including Eaton & Haas (1994) Titanic: Triumph and Tragedy, Patrick Stephens Ltd (CITATION: TitanicMETA) The study population used is not reproducible as it relied on the specific circumstances of the Titanic sinking, which we hope never happens again. Comparative analyses, however, can be performed on similar events such as the sinking of the Lusitania (Frey et al. 2010), but the exact conditions are unlikely to be repeated. 
 
 
 ## Sample size
