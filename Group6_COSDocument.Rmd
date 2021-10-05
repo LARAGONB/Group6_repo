@@ -13,7 +13,7 @@ author:
   - name        : Jack Goldman
     affiliation : 4  
   - name        : Briar Hunter
-    affiliation : 5  
+    affiliation : "5,6"  
 
 affiliation:
   - id          : 1
@@ -21,11 +21,13 @@ affiliation:
   - id          : 2
     institution : Wilfrid Laurier University 
   - id          : 3
-    institution :   
+    institution : University of British Columbia  
   - id          : 4
     institution :  
   - id          : 5
-    institution : Laurentian University 
+    institution : Laurentian University
+  - id          : 6
+    institution : Toronto Zoo
 
 output: prereg::cos_prereg
 ---
