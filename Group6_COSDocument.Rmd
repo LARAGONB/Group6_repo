@@ -21,7 +21,7 @@ affiliation:
   - id          : 2
     institution : Wilfrid Laurier University 
   - id          : 3
-    institution :   
+    institution : Institute of Forestry and Conservation, University of Toronto, Toronto, ON M5S 3E8, Canada  
   - id          : 4
     institution :  
   - id          : 5
