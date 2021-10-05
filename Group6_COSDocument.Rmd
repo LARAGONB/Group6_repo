@@ -4,7 +4,7 @@ shorttitle      : "My preregistration"
 date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\. %B %Y')`"
 
 author: 
-  - name        : Lina Aragón-Baquero
+  - name        : Lina Aragon-Baquero
     affiliation : 1
   - name        : Kristen Bill
     affiliation : 2
@@ -67,22 +67,15 @@ This is a retrospective observation study based on data obtained from the histor
 Not applicable
 
 ## Study design
-<!-- Describe your study design. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required. Typical study designs for observation studies include cohort, cross sectional, and case-control studies.
 
-This question has a variety of possible answers. The key is for a researcher to be as detailed as is necessary given the specifics of their design. Be careful to determine if every parameter has been specified in the description of the study design. There may be some overlap between this question and the following questions. That is OK, as long as sufficient detail is given in one of the areas to provide all of the requested information. For example, if the study design describes a complete factorial, 2 X 3 design and the treatments and levels are specified previously, you do not have to repeat that information.
+This study utilizes retrospective data from a one-time, natural event and thus data collection was constrained by availability of information gathered and documented from passengers and survivors at the time. On account of this being a one-time event with a defined number of people our design is a cross-sectional observation study. 
 
-Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels. -->
-
-To understand the driving factors of survival aboard the titanic, we will use a mixed effect model approach. ...
+To understand the driving factors of survival aboard the titanic, we will use a mixed effect model approach in which sex and class will be fixed factors and age a random factor: Survival ~ Class + Sex + (1|Age).
 
 
 ## Randomization
-<!-- If you are doing a randomized study, how will you randomize, and at what level? Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers.
 
-Example: We will use block randomization, where each participant will be randomly assigned to one of the four equally sized, predetermined blocks. The random number list used to create these four blocks will be created using the web applications available at https://random.org. -->
-
-Enter your response here.
-
+Not applicable.
 
 # Sampling Plan
 <!-- In this section we’ll ask you to describe how you plan to collect samples, as well as the number of samples you plan to collect and your rationale for this decision. Please keep in mind that the data described in this section should be the actual data used for analysis, so if you are using a subset of a larger dataset, please describe the subset that will actually be used in your study. -->
@@ -196,7 +189,7 @@ library(readr)
 library(magrittr)
 library(dplyr)
 library(titanic)
-knitr::kable(head(titanic))
+#knitr::kable(head(titanic))
 titanic<- read_csv(file="titanic.csv")
 ```
 
