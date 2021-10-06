@@ -204,39 +204,160 @@ No transformations will be used for these data unless transformations are needed
 
 ## Inference criteria
 
-```{=html}
-<!-- What criteria will you use to make inferences? Please describe the information youÍll use (e.g. p-values, bayes factors, specific model fit indices), as well as cut-off criterion, where appropriate. Will you be using one or two tailed tests for each of your analyses? If you are comparing multiple conditions or testing multiple hypotheses, will you account for this?
 
-p-values, confidence intervals, and effect sizes are standard means for making an inference, and any level is acceptable, though some criteria must be specified in this or previous fields. Bayesian analyses should specify a Bayes factor or a credible interval. If you are selecting models, then how will you determine the relative quality of each? In regards to multiple comparisons, this is a question with few "wrong" answers. In other words, transparency is more important than any specific method of controlling the false discovery rate or false error rate. One may state an intention to report all tests conducted or one may conduct a specific correction procedure; either strategy is acceptable.
-
-Example: We will use the standard p<.05 criteria for determining if the ANOVA and the post hoc test suggest that the results are significantly different from those expected if the null hypothesis were correct. The post-hoc Tukey-Kramer test adjusts for multiple comparisons. -->
-```
 ## Data exclusion
 
-```{=html}
-<!-- How will you determine what data or samples, if any, to exclude from your analyses? How will outliers be handled? Will you use any awareness check? Any rule for excluding a particular set of data is acceptable. One may describe rules for excluding a participant or for identifying outlier data.
-
-Example: No checks will be performed to determine eligibility for inclusion besides verification that each subject answered each of the three tastiness indices. Outliers will be included in the analysis. -->
-```
-Enter your response here.
+Passengers who did not have their age documented in the dataset will be excluded from the study. Outliers will be included in the analysis. 
 
 ## Missing data
 
-```{=html}
-<!-- How will you deal with incomplete or missing data? Any relevant explanation is acceptable. As a final reminder, remember that the final analysis must follow the specified plan, and deviations must be either strongly justified or included as a separate, exploratory analysis.
-
-Example: If a subject does not complete any of the three indices of tastiness, that subject will not be included in the analysis. -->
-```
-Enter your response here.
+Passengers who did not have their age in the dataset were automatically excluded from the analysis. 
 
 ## Exploratory analyses (optional)
 
-```{=html}
-<!-- If you plan to explore your data set to look for unexpected differences or relationships, you may describe those tests here. An exploratory test is any test where a prediction is not made up front, or there are multiple possible tests that you are going to use. A statistically significant finding in an exploratory test is a great way to form a new confirmatory hypothesis, which could be registered at a later time.
+```{r}
+library(tidyverse) # data wrangling and visualization
+library(sjPlot)    # to visualizing mixed-effects models
+library(lme4)      # "golden standard" for mixed-effects modelling in R (no p-values)
+library(lmerTest)  # p-values for MEMs based on the Satterthwaite approximation
+library(emmeans)   # post-hoc analysis
+library(knitr)     # beautifying tables
+library(sjstats)   # ICC - intraclass-correlation coefficient
+library(MASS)
+library(r2glmm)
 
-Example: We expect that certain demographic traits may be related to taste preferences. Therefore, we will look for relationships between demographic variables (age, gender, income, and marital status) and the primary outcome measures of taste preferences. -->
+#read in data
+df <- read.csv("titanic.csv")
+
+#explore data
+View(df)
+head(df)
+str(df)
+
+#change variables to factor
+df_new <- df %>%
+  mutate(pclass = factor(pclass),
+         survived = if_else(survived == 1, "no", "yes"),
+         survived = factor(survived, levels = c("no", "yes")),
+        Gender= if_else(Gender == 0, "male", "female"),
+         Gender= factor(Gender, levels = c("male", "female")))
+
+head(df_new)
+
+#checking missing values
+df_new %>%
+  summarise_each(list(~sum(is.na(.)))) %>%
+  gather() # 263 NA's in age
+
+
+list(df_new$age)
+
+#remove missing values
+df_clean<- df_new %>% 
+  drop_na(age)
+
+df_clean %>%
+  summarise_each(list(~sum(is.na(.)))) %>%
+  gather() # 
+
+#sample size after removing data
+
+df_clean %>% 
+  summarise(n = n()) #1046
+
+#Number of survived by gender, class
+
+df_clean %>%
+  group_by(Gender) %>%
+  count(survived)
+
+df_clean %>%
+  group_by(pclass) %>%
+  count(survived)
+
+#logit - multiple regression
+logit.m1 <- glm(survived ~ pclass + 
+                Gender, data = df_clean, 
+              family = binomial(link = "logit"))
+
+#stepwise selection
+logit.step <- stepAIC(logit.m1, direction = "both")
+
+logit.step$anova
+
+
+# multicollinearity
+car::vif(logit.m1)
+
+#model2 - interaction
+logit.m2 <- glm(survived ~ pclass + Gender + pclass: 
+                Gender, data = df_clean, 
+              family = binomial(link = "logit"))
+summary(logit.m2)
+
+
+#AIC
+anova(logit.m1, logit.m2)
+
+# multicollinearity
+car::vif(logit.m2)
+
+#random intercept model
+
+logit.mx1 <- glmer(survived ~ pclass + Gender + pclass:Gender
+                  + (1 | age),
+                  family = binomial(link = "logit"), 
+                  data = df_clean )
+summary(logit.mx1)
+
+
+#does not violate multicolinearity
+car::vif(logit.mx2)
+
+#interaction is significant and should be included in the model
+#R(m)2, the proportion of variance explained by the fixed predictors. 
+r2.mx = r2beta(logit.mx2, method = 'nsj', partial = TRUE)
+r2.mx
+
+#model validation
+logit.mxV <- glmer(survived ~ 1 
+                   + (1 | age),
+                   family = binomial(link = "logit"), 
+                   data = df_clean )
+
+performance::icc(logit.mxV)## suggests that random intercept of age does not explain that much variation in model
+MuMIn::r.squaredGLMM(logit.mx1)
+
+anova(logit.mx1,logit.mxV, test ="Chisq")
+
+#pseudo r-squared for GLM
+MuMIn::r.squaredLR(logit.m2)
+
+#Controlling for age as a random factor does not improve model fit and is not needed in the model
+#Therefore the best model is a logistic multiple regression (logit.m2)
+
+#multiple comparisons for simple logistic multiple regression
+tab_model(logit.m2, show.aic = T)
+emmeans(logit.m2, pairwise ~ pclass | Gender, adjust = "bonferroni")$contrasts 
+emmeans(logit.m2, pairwise ~ pclass:Gender)
+
+#visualize
+plot(allEffects(logit.m2))
+
+#model table for mixed model to see ICC etc.
+tab_model(logit.mx1, show.aic = T)
+
+
+#How well does the model classify - model validation bonus
+Pred <- predict(logit.m2, type = "response")
+Pred <- if_else(Pred > 0.5, 1, 0)
+ConfusionMatrix <- table(Pred, pull(df_clean, survived)) #`pull` results in a vector
+#correct classification rate
+sum(diag(ConfusionMatrix))/sum(ConfusionMatrix)#model correctly classifies 78%
+ConfusionMatrix     
+
 ```
-Enter your response here.
+
 
 # Other
 
