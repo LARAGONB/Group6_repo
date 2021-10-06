@@ -1,6 +1,6 @@
 ---
-title           : "My preregistration for the COS Preregistration Challenge"
-shorttitle      : "My preregistration"
+title           : "Sex and social class determined survival on the Titanic"
+shorttitle      : "Survival on the Titanic"
 date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\. %B %Y')`"
 
 author: 
@@ -21,9 +21,9 @@ affiliation:
   - id          : 2
     institution : Wilfrid Laurier University 
   - id          : 3
-    institution : University of British Columbia
+    institution : University of British Columbia Okanagan
   - id          : 4
-    institution : Institute of Forestry and Conservation, University of Toronto, Toronto, ON M5S 3E8, Canada 
+    institution : University of Toronto
   - id          : 5
     institution : Laurentian University
   - id          : 6
@@ -35,17 +35,17 @@ bibliography: references.bib
 
 # Study Information
 
-Where sex and class determinant for survival aboard the Titanic?
+Sex and social class determined survival on the Titanic?
 
 `r rmarkdown::metadata$title`
 
 ## Description
 
-It is well known that the survivorship upon the sinking of the Titanic was heavily influenced by sex and class of the individual. Studies reveal the role of sex and class was such a strong predictor of survival due to policies and social/physical barriers put in place that prioritzied first class and women/children. However, to our knowledge, no studies have investigated the impact of other variables on survival. Therefore, using a multivariate model we will test not only for sex and class, but also effects of age, family members, ticket fare, home destination and boat number. Enter your response here.
+It is well known that survivorship upon the sinking of the Titanic was heavily influenced by sex and class of the individual. Previous studies reveal the role of sex and class was a strong predictor of survival due to policies and social/physical barriers put in place prioritizing first class and women/children @hall1986 @frey2010. This study seeks to replicate previous findings while also statistically testing the degree to which these variables influenced survival. Therefore, using an alternative dataset, we will run a mixed effects model to test the effects of class and sex on survival on the Titanic.
 
 ## Hypotheses
 
-If both sex and class affected the survival aboard the Titanic, first-class passengers and women had a higher survival rate.
+Similar to other studies done on Titanic survivorship data, we predict class and sex will have a strong impact on survivorship, with women/children and higher class passengers (i.e. first class) being more likely to survive than men or third class passengers.
 
 # Design Plan
 
@@ -71,21 +71,11 @@ Not applicable.
 
 ## Existing data
 
-<!-- Preregistration is designed to make clear the distinction between confirmatory tests, specified prior to seeing the data, and exploratory analyses conducted after observing the data. Therefore, creating a research plan in which existing data will be used presents unique challenges. Please select the description that best describes your situation. Please do not hesitate to contact us if you have questions about how to answer this question (prereg@cos.io). -->
-
-**Registration prior to creation of data**. As of the date of submission of this research plan for preregistration, the data have not yet been collected, created, or realized.
-
-**Registration prior to any human observation of the data**. As of the date of submission, the data exist but have not yet been quantified, constructed, observed, or reported by anyone - including individuals that are not associated with the proposed study. Examples include museum specimens that have not been measured and data that have been collected by non-human collectors and are inaccessible.
-
-**Registration prior to accessing the data**. As of the date of submission, the data exist, but have not been accessed by you or your collaborators. Commonly, this includes data that has been collected by another researcher or institution.
-
-**Registration prior to analysis of the data**. As of the date of submission, the data exist and you have accessed it, though no analysis has been conducted related to the research plan (including calculation of summary statistics). A common situation for this scenario when a large dataset exists that is used for many different studies over time, or when a data set is randomly split into a sample for exploratory analyses, and the other section of data is reserved for later confirmatory data analysis.
-
-**Registration following analysis of the data**. As of the date of submission, you have accessed and analyzed some of the data relevant to the research plan. This includes preliminary analysis of variables, calculation of descriptive statistics, and observation of data distributions. Please see <https://cos.io/prereg> for more information.
+As of the date of this submission, we have accessed and analyzed some of the data relevant to the research plan, including preliminary analysis of variables, calculation of descriptive statistics, and observation of data distributions.
 
 ## Explanation of existing data
 
-Since this is a replication study, we have read prior papers analyzing the predictors of survival on the Titanic. The conclusions from these papers were that sex and class were the main influence on survival. However, no statistical tests were used to conclude these effects, rather they compared a table of those who survived and died. To determine the effect of class and sex, the authors also used information provided by survivors who described their experiences. We have not read any studies that statistically analyzed all determinants of survival, therefore we are unaware of any summary statistics.
+The data we will use is a dataset retrieved from <https://github.com/paulhendricks/titanic>. The data provides information on the fate of passengers of the Titanic including variables such as class, age, sex, ticket fare, and nationality. This dataset is an array resulting from cross-tabulating 2201 observations. Prior to conducting our own analyses, we will not read any papers performing statistical analyses and thus remain unaware of any summary statistics on the data. We have only read prior articles using a different dataset to discuss effects of social class and sex on survival. These papers also gathered information based on interviews of the survivors following the event.
 
 ## Data collection procedures
 
@@ -96,7 +86,7 @@ The answer to this question requires a specific set of instructions so that anot
 
 Example: Participants will be recruited through advertisements at local pastry shops. Participants will be paid $10 for agreeing to participate (raised to $30 if our sample size is not reached within 15 days of beginning recruitment). Participants must be at least 18 years old and be able to eat the ingredients of the pastries. -->
 ```
-This study utilized the publicly available titanic dataset found in R. The principal source for the data in this package is the Encyclopedia Titanica but a variety of researchers contributed to the datasets, including Eaton & Haas (1994) Titanic: Triumph and Tragedy, Patrick Stephens Ltd (CITATION: TitanicMETA) The study population used is not reproducible as it relied on the specific circumstances of the Titanic sinking, which we hope never happens again. Comparative analyses, however, can be performed on similar events such as the sinking of the Lusitania (Frey et al. 2010), but the exact conditions are unlikely to be repeated.
+This study will use the publicly available titanic dataset found in R. The principal source for the data in this package is the Encyclopedia Titanica but a variety of researchers contributed to the datasets, including Eaton & Haas (1994) Titanic: Triumph and Tragedy, Patrick Stephens Ltd (<http://campus.lakeforest.edu/frank/FILES/MLFfiles/Bio150/Titanic/TitanicMETA.pdf> ). The study population we will use is not reproducible, as it relied on the specific circumstances of the Titanic sinking, which we hope never happens again. Comparative analyses, however, can be performed on similar events such as the sinking of the Lusitania @frey2010a, but the exact conditions are unlikely to be repeated.
 
 ## Sample size
 
@@ -105,7 +95,7 @@ This study utilized the publicly available titanic dataset found in R. The princ
 
 Example: Our target sample size is 280 participants. We will attempt to recruit up to 320, assuming that not all will complete the total task. -->
 ```
-Enter your response here.
+The sample size of our study will be based on available passenger data. The total sample size in the dataset is 1309 subjects. Since 263 passengers are missing information about their age, we will be using a sample size of 1046. 
 
 ## Sample size rationale
 
@@ -114,7 +104,7 @@ Enter your response here.
 
 Example: We used the software program G*Power to conduct a power analysis. Our goal was to obtain .95 power to detect a medium effect size of .25 at the standard .05 alpha error probability. -->
 ```
-Enter your response here.
+Since these data are obtained from an historical event, we are constrained to the information made available to the public. The sample size in this dataset is not true to the total number of passengers and crew on board due to lack of records obtained prior to boarding the Titanic. Furthermore, not all information is provided for each passenger in the dataset, as certain details were only able to be obtained from the survivors. Since we are not adding observations from this historical event, we will not be doing a power analysis. After removing missing variables, we will use 1046 passengers from the dataset.
 
 ## Stopping rule
 
@@ -125,7 +115,7 @@ You may specify a stopping rule based on p-values only in the specific case of s
 
 Example: We will post participant sign-up slots by week on the preceding Friday night, with 20 spots posted per week. We will post 20 new slots each week if, on that Friday night, we are below 320 participants. -->
 ```
-Enter your response here.
+Not applicable
 
 # Variables
 
@@ -138,7 +128,7 @@ Enter your response here.
 
 Example: We manipulated the percentage of sugar by mass added to brownies. The four levels of this categorical variable are: 15%, 20%, 25%, or 40% cane sugar by mass. -->
 ```
-Enter your response here.
+Not applicable.
 
 ## Measured variables
 
@@ -149,7 +139,25 @@ Observational studies and meta-analyses will include only measured variables. As
 
 Example: The single outcome variable will be the perceived tastiness of the single brownie each participant will eat. We will measure this by asking participants ‘How much did you enjoy eating the brownie’ (on a scale of 1-7, 1 being 'not at all', 7 being 'a great deal') and 'How good did the brownie taste' (on a scale of 1-7, 1 being 'very bad', 7 being 'very good'). -->
 ```
-Enter your response here.
+**The measured variables will be:**
+
+-   Passenger class on the boat = (1 = 1st; 2 = 2nd; 3 = 3rd) 
+
+-   Survival = (0 = No; 1 = Yes) 
+
+-   Sex (those of uknown sex were added to male category)
+
+-   Age
+
+**Other variables provided in the dataset, but will not be included in this confirmatory analysis are:**
+
+-   Number of family members = number of siblings/spouses and parents/children on board 
+
+-   fare = Passenger Fare in British pounds
+
+-   Boat number = Which lifeboat a passenger was on
+
+-   Home/Destination = Destination of travels
 
 ## Indices
 
@@ -160,7 +168,7 @@ If you are using multiple pieces of data to construct a single variable, how wil
 
 Example: We will take the mean of the two questions above to create a single measure of 'brownie enjoyment.'  -->
 ```
-Enter your response here.
+To understand the summary statistics of the Titanic data, means will be extracted from the raw data. No other indices will be used for these data. Estimated marginal means will be used for multiple comparisons of simple logistic regressions.
 
 # Analysis Plan
 
