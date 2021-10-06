@@ -177,17 +177,7 @@ To understand the summary statistics of the Titanic data, means will be extracte
 
 A confirmatory analysis plan must state up front which variables are predictors (independent) and which are the outcomes (dependent), otherwise it is an exploratory analysis. You are allowed to describe any exploratory work here, but a clear confirmatory analysis is required. -->
 ```
-We will be using the predictor variables age, class, fare, gender, and boat ID to understand drivers of survival aboard the titanic.
-
-```{r message=FALSE, warning=FALSE}
-library(knitr)
-library(readr)
-library(magrittr)
-library(dplyr)
-library(titanic)
-#knitr::kable(head(titanic))
-titanic<- read_csv(file="titanic.csv")
-```
+To understand how social class and gender (independent) drive survivorship (dependent) on the Titanic, we will use general mixed effect models with age as a random effect in the model (R package: lme4). Interactions between gender and social class will also be explored to assess whether the interaction of the two variables are driving the outcome.
 
 ## Statistical models
 
@@ -201,7 +191,7 @@ This is perhaps the most important and most complicated question within the prer
 
 Example:  We will use a one-way between subjects ANOVA to analyze our results. The manipulated, categorical independent variable is 'sugar' whereas the dependent variable is our taste index. -->
 ```
-To assess the drivers of survivability aboard the titanic, mixed effect models will be run with X fixed effects and Y random effects.
+To understand how social class and gender drive survivorship on the Titanic, we will use generalized mixed effect models with age as a random effect in the model (R package: lme4). Interactions between gender and social class will also be explored to assess whether the interaction of the two variables are driving the outcome. Multicollinearity will also be assessed using variable inflation factor (VIF) (R package: car). Chi-squared test for comparisons of models will be used to test the differences among models. Estimated marginal means (R package: emmeans) with Bonferroni adjustments will be used for multiple comparisons for simple logistic multiple regression models. Model prediction assessment will be done using confusion matrices. 
 
 ## Transformations
 
@@ -210,7 +200,7 @@ To assess the drivers of survivability aboard the titanic, mixed effect models w
 
 Example: The "Effect of sugar on brownie tastiness" does not require any additional transformations. However, if it were using a regression analysis and each level of sweet had been categorically described (e.g. not sweet, somewhat sweet, sweet, and very sweet), 'sweet' could be dummy coded with 'not sweet' as the reference category. -->
 ```
-Enter your response here.
+No transformations will be used for these data unless transformations are needed to meet assumptions. There are several variables that are binary and will be coded. The dependent variable survived will be coded as "yes" and "no". Gender, which is a predictor variable, will be coded as "male" or "female."
 
 ## Inference criteria
 
