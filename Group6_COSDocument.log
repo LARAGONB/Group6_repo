@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.24)  5 OCT 2021 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.24)  5 OCT 2021 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -510,24 +510,24 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 ) (./Group6_COSDocument.aux)
 \openout1 = `Group6_COSDocument.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -562,7 +562,7 @@ LaTeX Font Info:    ... okay on input line 164.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 164.
+Package hyperref Info: Link coloring ON on input line 166.
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nam
 eref.sty
@@ -578,53 +578,53 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count296
 )
-LaTeX Info: Redefining \ref on input line 164.
-LaTeX Info: Redefining \pageref on input line 164.
-LaTeX Info: Redefining \nameref on input line 164.
+LaTeX Info: Redefining \ref on input line 166.
+LaTeX Info: Redefining \pageref on input line 166.
+LaTeX Info: Redefining \nameref on input line 166.
 (./Group6_COSDocument.out) (./Group6_COSDocument.out)
 \@outlinefile=\write4
 \openout4 = `Group6_COSDocument.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-65.
+67.
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-65.
+67.
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-165.
+167.
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.f
 d
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-165.
+167.
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.f
 d
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 165.
+(Font)              <12> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 165.
+(Font)              <8> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 165.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 165
+(Font)              <6> on input line 167.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 167
 .
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/ums
 a.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 165
+LaTeX Font Info:    Trying to load font information for U+msb on input line 167
 .
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/ums
@@ -633,7 +633,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 184.
+(hyperref)                be the same. Added a new anchor on input line 189.
 
 [1
 
@@ -641,11 +641,11 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 /pdftex.map}]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 210.
+(hyperref)                be the same. Added a new anchor on input line 211.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 243.
+(hyperref)                be the same. Added a new anchor on input line 244.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -657,15 +657,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 274.
+(Font)              <10> on input line 275.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 274.
+(Font)              <7> on input line 275.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 274.
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 308.
-
+(Font)              <5> on input line 275.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -675,16 +671,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
 [3]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 326.
+
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-29.
+47.
 
 (c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 341.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -696,11 +692,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 374.
+(hyperref)                be the same. Added a new anchor on input line 359.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 382.
+(hyperref)                be the same. Added a new anchor on input line 392.
+
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 400.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -712,16 +712,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5] (./Group6_COSDocument.aux)
 Package rerunfilecheck Info: File `Group6_COSDocument.out' has not changed.
-(rerunfilecheck)             Checksum: 9941C350A330586C938359811E5B87CD;4163.
+(rerunfilecheck)             Checksum: 1FCF9E53881E5C385DCE8333AC02DF7A;3767.
  ) 
 Here is how much of TeX's memory you used:
- 10721 strings out of 480559
- 159616 string characters out of 5901528
- 465029 words of memory out of 5000000
- 28117 multiletter control sequences out of 15000+600000
+ 10719 strings out of 480559
+ 159490 string characters out of 5901528
+ 465224 words of memory out of 5000000
+ 28116 multiletter control sequences out of 15000+600000
  453405 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,11n,66p,449b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,66p,276b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
 m-ec.enc}<c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
 ublic/lm/lmbx10.pfb><c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/fo
@@ -735,10 +735,10 @@ fb><c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmri12.pfb><c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmtt10.pfb><c:/Users/Lina Aragon/AppData/Roaming/TinyTeX/texmf-di
 st/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Group6_COSDocument.pdf (5 pages, 249212 bytes).
+Output written on Group6_COSDocument.pdf (5 pages, 254682 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 249 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
